@@ -1,6 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head></head>
+<meta charset="UTF-8">
+<link rel="icon" href="./assets/favicon for website.png" type="image/x-icon">
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>Welcome!</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+
+<style>
+:root {
+  --base-color: rgba(255, 255, 255, 1);
+  --hover-color: rgba(196, 138, 230, 1);
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Anton", sans-serif;
+  background-repeat: no-repeat;
+}
+.horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  border: 1px solid var(--base-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+
+}
+
+.faizanel{
+	background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 50px;
+padding-bottom: 50px;
+margin-top: 100px;
+margin-left: 100px;
+margin-right: 100px;
+width:100%
+
+}
+
+.horizontal > .text {
+  position: relative;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 300ms;
+}
+.horizontal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-color);
+  transform-origin: 100% 0;
+  transform: scale3d(0, 1, 1);
+  transition: transform 300ms;
+}
+.horizontal:hover .text {
+  background-position: 0 0;
+}
+.horizontal:hover::before {
+  transform-origin: 0 0;
+  transform: scale3d(1, 1, 1);
+}
+</style>
+
+
 <script>
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
@@ -37,7 +131,6 @@ function checkCookie() {
   }
 }
 </script>
-</head>
 
 <body onload="checkCookie()"></body>
 
